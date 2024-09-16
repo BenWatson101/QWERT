@@ -1,0 +1,3 @@
+C:/Users/bwats/CLionProjects/gitQWERT/cmake-build-debug/CMakeFiles/gitQWERT.dir
+C:/Users/bwats/CLionProjects/gitQWERT/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bwats/CLionProjects/gitQWERT/cmake-build-debug/CMakeFiles/rebuild_cache.dir
