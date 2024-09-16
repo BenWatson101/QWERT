@@ -4,6 +4,7 @@
 
 #ifndef QWARRAYS_H
 #define QWARRAYS_H
+#include <cstdint>
 #include <sstream>
 
 namespace QWERT {
