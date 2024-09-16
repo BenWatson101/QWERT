@@ -7,4 +7,5 @@ add_executable(gitQWERT main.cpp
         QWARRAYS.h
         QWERT.h
         QWMATH.h
-        QWMATHINTERFACES.h)
+        QWMATHINTERFACES.h
+        QWSAFE_ARRAYS.h)

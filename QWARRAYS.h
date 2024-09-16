@@ -42,15 +42,15 @@ public:
 
     virtual size_t getSize() = 0;
 
-    void set(size_t index, type to){
+    virtual void set(const size_t index, type to){
         arr[index] = to;
     }
 
-    type& get(size_t index) {
+    virtual type& get(const size_t index) {
         return arr[index];
     }
 
-    type* getP(size_t index) const {
+    virtual type* getP(const size_t index) {
         return arr + index;
     }
 
@@ -97,6 +97,7 @@ public:
 template<typename type, size_t size>
 class SizedArray : public ArrayTemplate<type[size], type>{
 public:
+
     size_t getSize() override {
         return size;
     }
