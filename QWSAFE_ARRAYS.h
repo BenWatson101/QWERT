@@ -43,7 +43,7 @@ namespace QWERT {
     class SafeSizedArray : SizedArray<T, size> {
 
         void check(const size_t index) {
-            if(index >= this->size) {
+            if(index >= size) {
                 throw std::out_of_range("Index out of range of array");
             }
             if(index < 0) {
@@ -57,17 +57,17 @@ namespace QWERT {
 
         void set(const size_t index, T to) override {
             check(index);
-            PointerArray<T>::set(index, to);
+            SizedArray<T,size>::set(index, to);
         }
 
         T & get(size_t index) override {
             check(index);
-            return PointerArray<T>::get(index);
+            return SizedArray<T,size>::get(index);
         }
 
         T * getP(const size_t index) override {
             check(index);
-            return PointerArray<T>::getP(index);
+            return SizedArray<T,size>::getP(index);
         }
     };
 }

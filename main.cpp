@@ -4,7 +4,7 @@
 
 int main() {
 
-    auto k = QWERT::SizedArray<int, 100>();
+    auto k = QWERT::SafeSizedArray<int, 100>();
 
     std::cout << sizeof(k);
 
