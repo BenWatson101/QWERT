@@ -7,6 +7,8 @@
 #include <cstdint>
 #include <sstream>
 
+#include "QWMATHINTERFACES.h"
+
 namespace QWERT {
 //
 //interface for arrays
@@ -89,7 +91,62 @@ public:
         }
         return oss.str();
     }
+
+    //
+    //Array math
+    //
+
+    template<typename T>
+    void ensureNumeric() const {
+        static_assert(std::is_arithmetic_v<T>, "Template argument must be a numeric type");
+    }
+
+    template<typename base, typename derived>
+    void checkInheritance() const {
+        static_assert(std::is_base_of_v<base, derived>, "T must derive from Base");
+    }
+
+    template<typename function>
+    ArrayTemplate& f() {
+        ensureNumeric<type>();
+        checkInheritance<Function, function>();
+        for(auto &i: *this) {
+            i = function::f(i);
+        }
+        return *this;
+    }
+
+    template<typename operate, typename type1, typename type2>
+    ArrayTemplate& g(ArrayTemplate<type1, type2>& other) {
+
+        ensureNumeric<type>();
+        ensureNumeric<type2>();
+        checkInheritance<Operator, operate>();
+        if(this->getSize() != other.getSize()) {
+            throw std::out_of_range("Sizes aren't matched for operation");
+        }
+
+        ArrayIterable<type> iterate = other.begin();
+
+        for(auto &i: *this) {
+            i = operate::g(i, *iterate);
+            ++iterate;
+        }
+        return *this;
+    }
+
+    template<typename grouper>
+    double h() {
+        ensureNumeric<type>();
+        checkInheritance<GroupCommutator, grouper>();
+        return grouper::h(*this);
+    }
 };
+
+
+
+
+
 
 //
 //array implementation

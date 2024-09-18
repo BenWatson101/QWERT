@@ -39,8 +39,13 @@ namespace QWERT {
         }
     };
 
+    /*idc about duplicated code,
+    it was either that or I create
+    a new child class with equal
+    amount of code
+     */
     template<typename T, size_t size>
-    class SafeSizedArray : SizedArray<T, size> {
+    class SafeSizedArray : public SizedArray<T, size> {
 
         void check(const size_t index) {
             if(index >= size) {
