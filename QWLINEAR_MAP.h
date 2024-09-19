@@ -16,10 +16,12 @@ namespace QWERT {
 
     //WIP, not to be confused with EHashMap
     template<template<typename, typename> class T, typename A, typename B>
-    class LinearHashMap {
+    class LinearMap {
         LinkedList<T<A,B>> pairs;
 
         T<A,B>* temp = nullptr;
+
+        LinearMap() = default;
 
         void forceAdd(T<A,B>& in) {
             pairs.add(in);
