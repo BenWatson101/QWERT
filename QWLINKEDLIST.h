@@ -116,11 +116,11 @@ template<typename type>
             } else if(from != 0 && to == this->sizeAndFizz - 1) {
                 delete start.getNode(from - 1, 0)->p;
             } else if(from == 0 && to != this->sizeAndFizz - 1) {
-                std::cout << "case 3";
+                //std::cout << "case 3";
                 Node<type> *temp = start.getNode(to + 1, 0);
-                std::cout << "past 1";
+                //std::cout << "past 1";
                 start.getNode(to, 0)->p = nullptr;
-                std::cout << "past 2";
+                //std::cout << "past 2";
                 //im too tired to debux this
 
                 delete start.p;
