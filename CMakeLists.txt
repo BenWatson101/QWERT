@@ -8,7 +8,7 @@ add_executable(gitQWERT main.cpp
         QWERT.h
         QWMATH.h
         QWSAFE_ARRAYS.h
-        QWLINEAR_HASHMAP.h
+        QWLINEAR_MAP.h
         QWLINKEDLIST.h
         QWMATHINTERFACES.h
 )

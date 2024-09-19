@@ -25,6 +25,10 @@ namespace QWERT {
         static double h(ArrayTemplate<k, double>& arr) {return 0;}
     };
 
+    //
+    //actual array math
+    //
+
     template<typename arrayType, typename type>
     template<typename function>
     ArrayTemplate<arrayType, type> & ArrayTemplate<arrayType, type>::f() {

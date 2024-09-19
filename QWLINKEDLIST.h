@@ -124,7 +124,7 @@ template<typename type>
                 //im too tired to debux this
 
                 delete start.p;
-                std::cout << "past 3";
+                //std::cout << "past 3";
                 start = *temp;
             } else {
                 Node<type> *temp = start.getNode(to + 1, 0);
