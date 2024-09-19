@@ -4,6 +4,8 @@
 #include "QWMATH.h"
 #include "QWSAFE_ARRAYS.h"
 
+
+
 int main() {
 
     using namespace QWERT;
