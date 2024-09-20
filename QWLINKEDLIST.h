@@ -11,6 +11,7 @@
 
 namespace QWERT {
 
+//not to be confused with ELinkedList
 template<typename type>
     class LinkedList
     {
