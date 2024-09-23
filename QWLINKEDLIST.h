@@ -17,6 +17,14 @@ template<typename type>
     {
     protected:
 
+    Node<type> start;
+    Node<type> *last = &start;
+    size_t size = 0;
+    size_t sizeAndFizz = 0;
+
+    public:
+
+    //moved to public for custom iterators
     class LinkedListIterableObject final {
     protected:
         Node<type>* pointer = nullptr;
@@ -39,12 +47,6 @@ template<typename type>
         }
     };
 
-    Node<type> start;
-    Node<type> *last = &start;
-    size_t size = 0;
-    size_t sizeAndFizz = 0;
-
-    public:
     LinkedList() = default;
 
     LinkedList(std::initializer_list<type> initList) {
@@ -166,8 +168,6 @@ template<typename type>
         oss << "]";
         return oss.str();
     }
-
-
 
     };
 
