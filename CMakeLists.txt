@@ -4,11 +4,12 @@ project(gitQWERT)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(gitQWERT main.cpp
-        QWARRAYS.h
+        Arrays/QWARRAYS.h
         QWERT.h
-        QWMATH.h
-        QWSAFE_ARRAYS.h
-        QWLINEAR_MAP.h
-        QWLINKEDLIST.h
-        QWMATHINTERFACES.h
+        Math/QWMATH.h
+        Arrays/QWSAFE_ARRAYS.h
+        Misc/QWLINEAR_MAP.h
+        LinkedList/QWLINKEDLIST.h
+        Math/QWMATHINTERFACES.h
+        LinkedList/QWLINKEDNODE.h
 )
