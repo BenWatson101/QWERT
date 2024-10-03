@@ -4,7 +4,7 @@
 
 #ifndef QWMATHINTERFACES_H
 #define QWMATHINTERFACES_H
-#include "Arrays/QWARRAYS.h"
+#include "../Arrays/QWARRAYS.h"
 
 
 namespace QWERT {

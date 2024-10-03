@@ -8,7 +8,7 @@
 #include <iostream>
 #include <thread>
 
-#include "QWARRAYS.h"
+#include "Arrays/QWARRAYS.h"
 
 //Quick Working Enterprise Tools
 namespace QWERT {

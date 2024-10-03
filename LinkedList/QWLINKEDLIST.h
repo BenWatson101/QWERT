@@ -6,7 +6,7 @@
 #define QWLINKEDLIST_H
 #include <sstream>
 #include <stdexcept>
-#include "QWERT.h"
+#include "../QWERT.h"
 #include "QWLINKEDNODE.h"
 
 namespace QWERT {

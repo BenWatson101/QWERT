@@ -4,7 +4,7 @@
 
 #ifndef QWLINEAR_MAP_H
 #define QWLINEAR_MAP_H
-#include "LinkedList/QWLINKEDLIST.h"
+#include "../LinkedList/QWLINKEDLIST.h"
 
 namespace QWERT {
     template<typename a, typename b>

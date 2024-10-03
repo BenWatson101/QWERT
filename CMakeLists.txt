@@ -12,4 +12,6 @@ add_executable(gitQWERT main.cpp
         LinkedList/QWLINKEDLIST.h
         Math/QWMATHINTERFACES.h
         LinkedList/QWLINKEDNODE.h
+        Neural/n_node.h
+        Misc/SORTING.h
 )
