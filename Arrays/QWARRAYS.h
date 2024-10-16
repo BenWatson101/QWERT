@@ -169,6 +169,11 @@ public:
         }
         return *this;
     }
+
+    //only use this if you know the original size
+     void resize(size_t size) {
+        this->size = size;
+    }
 };
 
 template<typename T>
